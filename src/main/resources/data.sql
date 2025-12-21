@@ -1,0 +1,4 @@
+-- Sample data for Product table
+-- Uncomment and edit according to your Product entity fields
+-- Example:
+-- INSERT INTO PRODUCT (id, name, description, price, image_name, image_type, image_data) VALUES (1, 'Sample Product', 'Description', 100.0, 'sample.jpg', 'image/jpeg', NULL);

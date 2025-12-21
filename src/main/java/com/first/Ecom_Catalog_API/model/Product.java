@@ -3,10 +3,13 @@ package com.first.Ecom_Catalog_API.model;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,7 +25,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String desc;
+    private String description;
     private String brand;
     private BigDecimal price;
     private String category;
@@ -30,7 +33,9 @@ public class Product {
     private boolean available;
     private int quantity;
 
-    // public Product() {
-    // }
+    private String imageName;
+    private String imageType;
+    @Lob
+    private byte[] imageData;
 
 }
